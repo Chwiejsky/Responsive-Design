@@ -1,0 +1,44 @@
+nav {
+  grid-area: nav;
+  background-color: blueviolet;
+}
+
+main {
+  grid-area: main;
+}
+.articles article {
+  /* border: 1px solid black; */
+  margin: 10px;
+}
+.articles h1 {
+  text-align: center;
+}
+.articles p {
+  text-align: center;
+  margin: 10px 20px;
+}
+@media only screen and (min-width: 600px) {
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+footer {
+  grid-area: footer;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "nav nav nav nav nav nav "
+    "main main main main main main"
+    "footer footer footer footer footer footer";
+}

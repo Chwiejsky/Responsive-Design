@@ -1,6 +1,7 @@
 * {
   margin: 0;
 }
+
 nav {
   grid-area: nav;
 }
@@ -23,6 +24,7 @@ nav a:hover {
 .fa {
   padding-left: 10px;
 }
+
 /* .flexTest {
   display: flex;
 }
@@ -34,7 +36,6 @@ nav a:hover {
 }
 .dropdown-content {
   display: none;
-  /* visibility: hidden; */
   position: absolute;
   background-color: #333;
   width: 100%;
@@ -54,16 +55,28 @@ nav a:hover {
   background-color: #555;
 }
 
-.dropdown:hover .dropdown-content li {
+.dropdown:hover .dropdown-content {
   display: block;
-  animation: load 0.4s forwards;
-  /* visibility: visible; */
+  animation: load 0.8s forwards;
 }
 @keyframes load {
   100% {
     opacity: 1;
   }
 }
+/* Burger */
+nav label {
+  /* margin: 0 20px 0 0; */
+  /* font-size: 26px; */
+  /* padding-left: 10px; */
+  display: none;
+  /* line-height: 50px; */
+}
+#show-menu {
+  display: none;
+}
+
+/* KONIEC NAVBARU */
 
 .bigText {
   text-align: center;
@@ -89,7 +102,47 @@ main {
   text-align: center;
   padding: 10px;
 }
+@media only screen and (max-width: 599px) {
+  nav ul {
+    display: block;
+    background-color: #333;
+    list-style-type: none;
+    padding: 0;
+  }
+  .navbar {
+    display: none;
+    opacity: 0;
+  }
 
+  nav label {
+    margin: 0 20px 0 0;
+    /* font-size: 26px; */
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    /* line-height: 50px; */
+  }
+
+  /* #show-menu:checked + #show-menu {
+    background-color: red;
+    display: block;
+  } */
+
+  .show-menu {
+    background: #333;
+    display: flex;
+    width: 100%;
+
+    cursor: pointer;
+  }
+  /*hiding our navigation*/
+
+  /*displaying our list items as block element; if checkbox is check*/
+  input[type="checkbox"]:checked + .navbar {
+    display: block;
+    animation: load 0.8s forwards;
+  }
+}
 @media only screen and (min-width: 600px) {
   .articles {
     display: grid;

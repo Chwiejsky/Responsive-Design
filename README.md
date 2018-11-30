@@ -6,4 +6,5 @@
 
 ![Alt text](./img/mainView.png?raw=true "MainView")
 <br/>
+<br/>
 ![Alt text](./img/mobileView.png?raw=true "Mobile View")
